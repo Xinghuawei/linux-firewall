@@ -1,0 +1,216 @@
+----------------------------------------------------------------
+# Testing allowed TCP ports 22 80 443 on 192.168.0.3
+----------------------------------------------------------------
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 1.7/1.7/1.7 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+len=46 ip=192.168.0.3 ttl=63 DF id=0 sport=22 flags=SA seq=0 win=64240 rtt=1.7 ms
+
+** Port 22 is open and service is running on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 1.5/1.5/1.5 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+len=46 ip=192.168.0.3 ttl=63 DF id=0 sport=80 flags=RA seq=0 win=0 rtt=1.5 ms
+
+** Port 80 is open, but no service is responding on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 0.8/0.8/0.8 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+len=46 ip=192.168.0.3 ttl=63 DF id=0 sport=443 flags=RA seq=0 win=0 rtt=0.8 ms
+
+** Port 443 is open, but no service is responding on 192.168.0.3.
+
+----------------------------------------------------------------
+# Testing blocked TCP ports 32768 32769 32770 32771 32772 32773 32774 32775 137 138 139 111 515 on 192.168.0.3
+----------------------------------------------------------------
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 32768 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 32769 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 32770 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 32771 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 32772 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 32773 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 32774 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 32775 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 137 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 138 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 139 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 111 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 515 are DROPPED on 192.168.0.3.
+
+----------------------------------------------------------------
+# Testing inbound SYN to port 1025 on 192.168.0.3
+----------------------------------------------------------------
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 1025 are DROPPED on 192.168.0.3.
+
+----------------------------------------------------------------
+# Testing if fragments are received from 192.168.0.3
+----------------------------------------------------------------
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 1.8/1.8/1.8 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+len=46 ip=192.168.0.3 ttl=63 DF id=0 sport=22 flags=SA seq=0 win=64240 rtt=1.8 ms
+
+** Port 22 is open and service is running on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 2.8/2.8/2.8 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+len=46 ip=192.168.0.3 ttl=63 DF id=0 sport=80 flags=RA seq=0 win=0 rtt=2.8 ms
+
+** Port 80 is open, but no service is responding on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max = 0.8/0.8/0.8 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+len=46 ip=192.168.0.3 ttl=63 DF id=0 sport=443 flags=RA seq=0 win=0 rtt=0.8 ms
+
+** Port 443 is open, but no service is responding on 192.168.0.3.
+
+----------------------------------------------------------------
+# Testing 192.168.0.3 responds to SYN,FIN packets
+----------------------------------------------------------------
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): SF set, 40 headers + 0 data bytes
+
+**port 22 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): SF set, 40 headers + 0 data bytes
+
+**port 80 are DROPPED on 192.168.0.3.
+
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): SF set, 40 headers + 0 data bytes
+
+**port 443 are DROPPED on 192.168.0.3.
+
+----------------------------------------------------------------
+# Testing if 192.168.0.3 responds to TELNET packets
+----------------------------------------------------------------
+
+--- 192.168.0.3 hping statistic ---
+1 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+HPING 192.168.0.3 (eno1 192.168.0.3): S set, 40 headers + 0 data bytes
+
+**port 23 are DROPPED on 192.168.0.3.
+
